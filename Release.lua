@@ -34,11 +34,6 @@ Athena.functions.update_FOVs = function ()
     return Circle
 end
 
-Athena.functions.onKeyPress = function(inputObject)
-    if inputObject.KeyCode == Enum.KeyCode[getgenv().Athena.SilentAim.Key:upper()] then
-        getgenv().Athena.SilentAim.Enabled = not getgenv().Athena.SilentAim.Enabled
-    end
-
     if inputObject.KeyCode == Enum.KeyCode[getgenv().Athena.Tracing.Key:upper()] then
         getgenv().Athena.Tracing.Enabled = not getgenv().Athena.Tracing.Enabled
         if getgenv().Athena.Tracing.Enabled then
