@@ -34,6 +34,11 @@ Athena.functions.update_FOVs = function ()
     return Circle
 end
 
+Athena.functions.onKeyPress = function(inputObject)
+    if inputObject.KeyCode == Enum.KeyCode[getgenv().Athena.SilentAim.Key:upper()] then
+        print("test")
+    end
+
     if inputObject.KeyCode == Enum.KeyCode[getgenv().Athena.Tracing.Key:upper()] then
         getgenv().Athena.Tracing.Enabled = not getgenv().Athena.Tracing.Enabled
         if getgenv().Athena.Tracing.Enabled then
@@ -196,7 +201,6 @@ __index = hookmetamethod(game,"__index", function(Obj, Property)
     end
     return __index(Obj, Property)
 end)
-
 
 getgenv().Desync = true
 getgenv().KeyBind = Enum.KeyCode.L
@@ -620,5 +624,4 @@ if getgenv().Athena.Misc.AnimationGamepass == true then
     game.Players.LocalPlayer.CharacterAdded:Connect(AnimationPack)
 end
 end)
-
 
