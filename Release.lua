@@ -34,17 +34,6 @@ Athena.functions.update_FOVs = function ()
     return Circle
 end
 
-    if inputObject.KeyCode == Enum.KeyCode[getgenv().Athena.Tracing.Key:upper()] then
-        getgenv().Athena.Tracing.Enabled = not getgenv().Athena.Tracing.Enabled
-        if getgenv().Athena.Tracing.Enabled then
-            lockedCamTo = Athena.functions.returnClosestPlayer(getgenv().Athena.SilentAim.ChanceData.Chance)
-        end
-    end
-end
-
-UIS.InputBegan:Connect(Athena.functions.onKeyPress)
-
-
 Athena.functions.wallCheck = function(direction, ignoreList)
     if not getgenv().Athena.SilentAim.AimingData.CheckWalls then
         return true
